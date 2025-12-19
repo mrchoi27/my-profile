@@ -3,6 +3,67 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Hero section */
+  --bg-hero-from: #18181b;
+  --bg-hero-to: #27272a;
+
+  /* Section backgrounds */
+  --bg-section-light: #ffffff;
+  --bg-section-alt: #fafafa;
+
+  /* Text colors */
+  --text-heading: #18181b;
+  --text-body: #3f3f46;
+  --text-muted: #71717a;
+
+  /* Card styles */
+  --card-bg: #ffffff;
+  --card-bg-alt: #fafafa;
+  --card-text: #18181b;
+  --card-border: #e4e4e7;
+
+  /* Brand colors */
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-primary-light: #60a5fa;
+
+  /* Navbar */
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-border: #e4e4e7;
+}
+
+:root[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  /* Hero section */
+  --bg-hero-from: #0a0a0a;
+  --bg-hero-to: #18181b;
+
+  /* Section backgrounds */
+  --bg-section-light: #18181b;
+  --bg-section-alt: #27272a;
+
+  /* Text colors */
+  --text-heading: #fafafa;
+  --text-body: #d4d4d8;
+  --text-muted: #a1a1aa;
+
+  /* Card styles */
+  --card-bg: #27272a;
+  --card-bg-alt: #3f3f46;
+  --card-text: #fafafa;
+  --card-border: #52525b;
+
+  /* Brand colors */
+  --color-primary: #60a5fa;
+  --color-primary-hover: #3b82f6;
+  --color-primary-light: #93c5fd;
+
+  /* Navbar */
+  --nav-bg: rgba(24, 24, 27, 0.8);
+  --nav-border: #3f3f46;
 }
 
 @theme inline {
@@ -12,11 +73,53 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Animation keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
